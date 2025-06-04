@@ -26,10 +26,12 @@ print(engStr[:3])
 print(engStr[1:3])
 print(engStr[1:])
 
+# 파이썬에서는 한글도 영문과 동일한 슬라이싱이 가능하다.
 korStr = '안녕하세요? 파이썬입니다.'
 print(korStr[0])
 print(korStr[:2])
 print(korStr[0:6])
 
+# 정수와 문자는 연결할 수 없다.
 # TypeError: can only concatenate str (not "int") to str
 print(engStr + 100)
