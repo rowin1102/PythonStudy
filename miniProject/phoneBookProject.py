@@ -17,7 +17,6 @@ def Menu():
       print(f'{'종료합니다.':-^30}')
       break
     
-
 info = []
 
 def Insert():
@@ -38,13 +37,12 @@ def Insert():
   print('정보 입력 완료\n')
   
 def Show():
-  print(f'{'출력기능':-^30}')
-  print('번호    성명        전화           주소')
-  print(f'{'':-^34}')
+  print(f'{'출력기능':-^40}')
+  print(f"{'번호':^5} {'성명':^5} {'전화':^10} {'주소':^15}")
+  print(f'{'':-^40}')
   
   for idx, dict in enumerate(info):
-    print(f"  {idx+1}     {dict['name']}     {dict['phoneNum']}     {dict['address']}")
-  
+    print(f"{idx+1:^5} {dict['name']:^10} {dict['phoneNum']:^10} {dict['address']:^15}")
   print()
 
 def Search():
@@ -54,9 +52,9 @@ def Search():
   
   for idx, dict in enumerate(info):
     if dict['name'] == searchName:
-      print('번호    성명        전화           주소')
-      print(f"  {idx+1}     {dict['name']}     {dict['phoneNum']}     {dict['address']}")
-      
+      print(f"{'번호':^5} {'성명':^5} {'전화':^10} {'주소':^15}")
+      print(f'{'':-^40}')
+      print(f"{idx+1:^5} {dict['name']:^10} {dict['phoneNum']:^10} {dict['address']:^15}")
   print()
 
 

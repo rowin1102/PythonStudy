@@ -44,10 +44,11 @@ def Show():
     curs.execute(sql)
     rows = curs.fetchall()
     
-    print('번호  성명     전화        주소')
+    print(f"{'번호':^5} {'성명':^5} {'전화':^10} {'주소':^15}")
+    print(f'{'':-^40}')
     
     for row in rows:
-      print('%s   %s   %s    %s' % (row[0], row[1], row[2], row[3]))
+      print(f"{row[0]:^5} {row[1]:^10} {row[2]:^10} {row[3]:^15}")
   except Exception as e:
     print('쿼리 실행시 오류발생', e)
   
@@ -62,10 +63,11 @@ def Search():
     curs.execute(sql)
     rows = curs.fetchall()
     
-    print('번호  성명     전화        주소')
+    print(f"{'번호':^5} {'성명':^5} {'전화':^10} {'주소':^15}")
+    print(f'{'':-^40}')
     
     for row in rows:
-      print('%s   %s   %s    %s' % (row[0], row[1], row[2], row[3]))
+      print(f"{row[0]:^5} {row[1]:^10} {row[2]:^10} {row[3]:^15}")
   except Exception as e:
     print('쿼리 실행시 오류발생', e)
   
