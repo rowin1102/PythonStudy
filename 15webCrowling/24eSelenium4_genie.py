@@ -1,6 +1,5 @@
 import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
@@ -8,16 +7,17 @@ driver = webdriver.Chrome()
 url = 'https://www.genie.co.kr/chart/top200'
 driver.get(url)
 
-# 파싱을 위해 Soup 객체로 변환
-html = driver.page_source
-soup = BeautifulSoup(html, 'html.parser')
-
 song_data = []
 rank = 1
 
 # 1~4 페이지까지 반복
 for page in range(1, 5):
   print('페이지', page)
+  
+  # 파싱을 위해 Soup 객체로 변환
+  html = driver.page_source
+  soup = BeautifulSoup(html, 'html.parser')
+  
   driver.implicitly_wait(2)
   # 각 차트의 순위 반복을 위한 tr요소 선택
   songs = soup.select('tbody > tr')
