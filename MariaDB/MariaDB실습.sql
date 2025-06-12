@@ -151,3 +151,12 @@ INSERT INTO board (title, content, id, postdate, visitcount)
 	VALUES ('제목5', '내용5입니다', 'korea', NOW(), 0);
 
 SELECT * FROM board;
+
+CREATE TABLE phonebooks (
+	idx INT PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(10) NOT NULL,
+	phoneNum INT UNSIGNED NOT NULL,
+	address VARCHAR(20) NOT null
+);
+
+DROP TABLE phonebooks;
